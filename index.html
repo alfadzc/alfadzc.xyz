@@ -25,54 +25,24 @@
     <a href="#tools" class="hover:text-yellow-400">Tools</a>
     <a href="#contact" class="hover:text-yellow-400">Contact</a>
 
-    <!-- 🔹 Toggle Dark/Light dengan tooltip -->
-    <div class="ml-4 relative group">
-      <label class="relative inline-flex items-center cursor-pointer">
-        <input type="checkbox" id="theme-toggle" class="sr-only peer">
-        <div class="w-14 h-7 bg-gray-300 rounded-full dark:bg-gray-700 peer-checked:bg-yellow-500 relative transition-colors duration-300">
-          <div class="absolute left-1 top-1 w-5 h-5 bg-white rounded-full flex items-center justify-center text-xs transition-transform duration-300 transform peer-checked:translate-x-7">
-            <span class="peer-checked:hidden">🔆</span>
-            <span class="hidden peer-checked:block">🌙</span>
-          </div>
-        </div>
-      </label>
-      <!-- Tooltip -->
-      <div id="theme-tooltip" class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gray-800 text-white text-xs rounded py-1 px-2 whitespace-nowrap">
-        Switch to dark theme
+<!-- Toggle Dark/Light -->
+<div class="ml-4 relative group">
+  <label class="relative inline-flex items-center cursor-pointer">
+    <input type="checkbox" id="theme-toggle" class="sr-only peer">
+    <!-- Track -->
+    <div class="w-14 h-7 bg-gray-300 rounded-full dark:bg-gray-700 transition-colors duration-300 peer-checked:bg-yellow-500 relative">
+      <!-- Thumb -->
+      <div class="absolute left-1 top-1 w-5 h-5 bg-white rounded-full flex items-center justify-center text-xs transition-transform duration-300 transform peer-checked:translate-x-7">
+        <span class="peer-checked:hidden">☀️</span>
+        <span class="hidden peer-checked:block">🌙</span>
       </div>
     </div>
+  </label>
+  <!-- Tooltip -->
+  <div id="theme-tooltip" class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gray-800 text-white text-xs rounded py-1 px-2 whitespace-nowrap">
+    Switch to dark theme
   </div>
-</nav>
-
-<!-- Script Toggle -->
-<script>
-  const themeToggle = document.getElementById("theme-toggle");
-  const tooltip = document.getElementById("theme-tooltip");
-
-  // Load preferensi tema
-  if (localStorage.getItem("theme") === "dark") {
-    document.documentElement.classList.add("dark");
-    themeToggle.checked = true;
-    tooltip.textContent = "Switch to light theme";
-  } else {
-    document.documentElement.classList.remove("dark");
-    themeToggle.checked = false;
-    tooltip.textContent = "Switch to dark theme";
-  }
-
-  // Event listener untuk toggle
-  themeToggle.addEventListener("change", () => {
-    if (themeToggle.checked) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-      tooltip.textContent = "Switch to light theme";
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-      tooltip.textContent = "Switch to dark theme";
-    }
-  });
-</script>
+</div>
 
   <!-- Hero Section -->
   <section id="home" class="flex flex-col justify-center items-center text-center py-24 px-6">
