@@ -259,9 +259,21 @@
   </footer>
 
 <!-- Particles Config -->
+  <script>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script>
   particlesJS("particles-js", {
-    ...
+    "particles": {
+      "number": { "value": 80 },
+      "size": { "value": 3 },
+      "move": { "speed": 2 },
+      "line_linked": { "enable": true, "color": "#60a5fa" }, // biru muda
+      "color": { "value": "#3b82f6" } // biru
+    },
+    "interactivity": {
+      "events": {
+        "onhover": { "enable": true, "mode": "repulse" }
+      }
+    }
   });
 </script>
