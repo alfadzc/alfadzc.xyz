@@ -25,16 +25,19 @@
     <a href="#tools" class="hover:text-yellow-400">Tools</a>
     <a href="#contact" class="hover:text-yellow-400">Contact</a>
 
-    <!-- 🔹 Toggle Dark/Light dengan tooltip -->
+    <!-- 🔹 Toggle Dark/Light dengan tooltip di bawah -->
     <div class="ml-4 relative group">
       <label class="relative inline-flex items-center cursor-pointer">
         <input type="checkbox" id="theme-toggle" class="sr-only peer">
-        <div class="w-14 h-7 bg-gray-300 rounded-full dark:bg-gray-700 peer-checked:bg-yellow-500 relative transition-colors duration-300">
-    <div id="theme-thumb" class="absolute left-1 top-1 w-5 h-5 bg-white rounded-full flex items-center justify-center text-xs transition-transform duration-300">
-  🔅
-   </div>
-      <!-- Tooltip -->
-      <div id="theme-tooltip" class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gray-800 text-white text-xs rounded py-1 px-2 whitespace-nowrap">
+        <div class="w-14 h-7 bg-gray-300 rounded-full dark:bg-gray-700 transition-colors duration-300 relative">
+          <!-- Thumb -->
+          <div id="theme-thumb" class="absolute left-1 top-1 w-5 h-5 bg-white rounded-full flex items-center justify-center text-xs transition-transform duration-300">
+            🔅
+          </div>
+        </div>
+      </label>
+      <!-- Tooltip di bawah toggle -->
+      <div id="theme-tooltip" class="absolute top-full mt-2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gray-800 text-white text-xs rounded py-1 px-2 whitespace-nowrap text-center">
         Switch to dark theme
       </div>
     </div>
@@ -44,6 +47,7 @@
 <!-- Script Toggle -->
 <script>
   const themeToggle = document.getElementById("theme-toggle");
+  const themeThumb = document.getElementById("theme-thumb");
   const tooltip = document.getElementById("theme-tooltip");
 
   // Load preferensi tema
@@ -51,10 +55,14 @@
     document.documentElement.classList.add("dark");
     themeToggle.checked = true;
     tooltip.textContent = "Switch to light theme";
+    themeThumb.style.transform = "translateX(28px)";
+    themeThumb.textContent = "🌙";
   } else {
     document.documentElement.classList.remove("dark");
     themeToggle.checked = false;
     tooltip.textContent = "Switch to dark theme";
+    themeThumb.style.transform = "translateX(0)";
+    themeThumb.textContent = "🔅";
   }
 
   // Event listener untuk toggle
@@ -63,10 +71,14 @@
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
       tooltip.textContent = "Switch to light theme";
+      themeThumb.style.transform = "translateX(28px)";
+      themeThumb.textContent = "🌙";
     } else {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
       tooltip.textContent = "Switch to dark theme";
+      themeThumb.style.transform = "translateX(0)";
+      themeThumb.textContent = "🔅";
     }
   });
 </script>
