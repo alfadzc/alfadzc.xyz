@@ -25,16 +25,47 @@
     <a href="#tools" class="hover:text-yellow-400">Tools</a>
     <a href="#contact" class="hover:text-yellow-400">Contact</a>
 
-<!-- Toggle Dark/Light -->
-<label class="ml-4 relative inline-flex cursor-pointer items-center">
-  <input type="checkbox" id="theme-toggle" class="sr-only peer">
-  <span class="w-12 h-6 flex items-center rounded-full bg-gray-300 dark:bg-gray-700 p-1 transition">
-    <!-- bola putih -->
-    <span class="w-5 h-5 bg-white rounded-full flex items-center justify-center transform transition peer-checked:translate-x-6">
-      <span id="icon" class="text-xs">☀️</span>
-    </span>
-  </span>
-</label>
+    <!-- 🔹 Toggle Dark/Light -->
+    <label class="ml-4 relative inline-flex items-center cursor-pointer">
+      <input type="checkbox" id="theme-toggle" class="sr-only peer">
+      <div class="w-14 h-7 bg-gray-300 peer-focus:outline-none rounded-full peer dark:bg-gray-700 
+                  peer-checked:bg-yellow-500 transition">
+        <div class="absolute left-1 top-1 w-5 h-5 bg-white rounded-full transition 
+                    peer-checked:translate-x-7 flex items-center justify-center text-xs">
+          <!-- ☀️ muncul kalau light mode -->
+          <span class="peer-checked:hidden">☀️</span>
+          <!-- 🌙 muncul kalau dark mode -->
+          <span class="hidden peer-checked:block">🌙</span>
+        </div>
+      </div>
+    </label>
+  </div>
+</nav>
+
+<!-- Script Toggle -->
+<script>
+  const themeToggle = document.getElementById("theme-toggle");
+
+  // Load preferensi tema dari localStorage
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark");
+    themeToggle.checked = true;
+  } else {
+    document.documentElement.classList.remove("dark");
+    themeToggle.checked = false;
+  }
+
+  // Event listener untuk toggle
+  themeToggle.addEventListener("change", () => {
+    if (themeToggle.checked) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  });
+</script>
 
   <!-- Hero Section -->
   <section id="home" class="flex flex-col justify-center items-center text-center py-24 px-6">
