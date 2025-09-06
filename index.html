@@ -25,17 +25,16 @@
     <a href="#tools" class="hover:text-yellow-400">Tools</a>
     <a href="#contact" class="hover:text-yellow-400">Contact</a>
 
-    <!-- Toggle Dark/Light -->
-    <label class="ml-4 relative inline-flex cursor-pointer items-center">
-      <input type="checkbox" id="theme-toggle" class="sr-only">
-      <span class="w-12 h-6 flex items-center rounded-full bg-gray-300 dark:bg-gray-700 p-1 transition">
-        <span class="w-5 h-5 bg-white rounded-full flex items-center justify-center transform transition peer-checked:translate-x-6">
-          <span id="icon" class="text-xs">☀️</span>
-        </span>
-      </span>
-    </label>
-  </div>
-</nav>
+<!-- Toggle Dark/Light -->
+<label class="ml-4 relative inline-flex cursor-pointer items-center">
+  <input type="checkbox" id="theme-toggle" class="sr-only peer">
+  <span class="w-12 h-6 flex items-center rounded-full bg-gray-300 dark:bg-gray-700 p-1 transition">
+    <!-- bola putih -->
+    <span class="w-5 h-5 bg-white rounded-full flex items-center justify-center transform transition peer-checked:translate-x-6">
+      <span id="icon" class="text-xs">☀️</span>
+    </span>
+  </span>
+</label>
 
 <script>
   const t = document.getElementById("theme-toggle"),
