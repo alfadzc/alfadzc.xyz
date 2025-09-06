@@ -37,7 +37,7 @@
         </div>
       </label>
       <!-- Tooltip -->
-      <div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gray-800 text-white text-xs rounded py-1 px-2 whitespace-nowrap">
+      <div id="theme-tooltip" class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gray-800 text-white text-xs rounded py-1 px-2 whitespace-nowrap">
         Switch to dark theme
       </div>
     </div>
@@ -47,14 +47,17 @@
 <!-- Script Toggle -->
 <script>
   const themeToggle = document.getElementById("theme-toggle");
+  const tooltip = document.getElementById("theme-tooltip");
 
   // Load preferensi tema
   if (localStorage.getItem("theme") === "dark") {
     document.documentElement.classList.add("dark");
     themeToggle.checked = true;
+    tooltip.textContent = "Switch to light theme";
   } else {
     document.documentElement.classList.remove("dark");
     themeToggle.checked = false;
+    tooltip.textContent = "Switch to dark theme";
   }
 
   // Event listener untuk toggle
@@ -62,9 +65,11 @@
     if (themeToggle.checked) {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
+      tooltip.textContent = "Switch to light theme";
     } else {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
+      tooltip.textContent = "Switch to dark theme";
     }
   });
 </script>
