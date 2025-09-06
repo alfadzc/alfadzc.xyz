@@ -1,5 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<style>
+  .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(0);
+    animation: ripple-animation 0.8s linear;
+    pointer-events: none;
+  }
+
+  @keyframes ripple-animation {
+    to {
+      transform: scale(10);
+      opacity: 0;
+    }
+  }
+</style>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +26,7 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
-<body class="bg-blue-100 text-black dark:bg-gray-900 dark:text-white relative min-h-screen">
+<body class="relative text-black dark:text-white min-h-screen">
 
   <!-- Background Particles -->
 <div id="particles-js" class="fixed inset-0 -z-10"></div>
@@ -216,22 +232,17 @@
   </footer>
 
   <!-- Particles Config -->
-  <script>
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script>
-  particlesJS("particles-js", {
-    "particles": {
-      "number": { "value": 80 },
-      "size": { "value": 3 },
-      "move": { "speed": 2 },
-      "line_linked": { "enable": true, "color": "#60a5fa" }, // biru muda
-      "color": { "value": "#3b82f6" } // biru
-    },
-    "interactivity": {
-      "events": {
-        "onhover": { "enable": true, "mode": "repulse" }
-      }
-    }
+  document.body.addEventListener("click", function(e) {
+    const ripple = document.createElement("span");
+    ripple.classList.add("ripple");
+    ripple.style.left = `${e.clientX}px`;
+    ripple.style.top = `${e.clientY}px`;
+    ripple.style.width = ripple.style.height = "100px";
+    document.body.appendChild(ripple);
+
+    setTimeout(() => {
+      ripple.remove();
+    }, 800);
   });
 </script>
-
