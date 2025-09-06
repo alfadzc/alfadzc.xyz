@@ -30,12 +30,9 @@
       <label class="relative inline-flex items-center cursor-pointer">
         <input type="checkbox" id="theme-toggle" class="sr-only peer">
         <div class="w-14 h-7 bg-gray-300 rounded-full dark:bg-gray-700 peer-checked:bg-yellow-500 relative transition-colors duration-300">
-          <div class="absolute left-1 top-1 w-5 h-5 bg-white rounded-full flex items-center justify-center text-xs transition-transform duration-300 transform peer-checked:translate-x-7">
-            <span class="peer-checked:hidden">🔅</span>
-            <span class="hidden peer-checked:block">🌙</span>
-          </div>
-        </div>
-      </label>
+    <div id="theme-thumb" class="absolute left-1 top-1 w-5 h-5 bg-white rounded-full flex items-center justify-center text-xs transition-transform duration-300">
+  🔅
+   </div>
       <!-- Tooltip -->
       <div id="theme-tooltip" class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gray-800 text-white text-xs rounded py-1 px-2 whitespace-nowrap">
         Switch to dark theme
