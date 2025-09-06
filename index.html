@@ -169,35 +169,3 @@
         "color": { "value": "#FFD700" }
       }
     });
-
-    // Toggle theme
-    const toggleBtn = document.getElementById("theme-toggle");
-    const htmlEl = document.documentElement;
-
-    if (localStorage.getItem("theme") === "light") {
-      htmlEl.classList.remove("dark");
-      toggleBtn.textContent = "🌙";
-    } else {
-      htmlEl.classList.add("dark");
-      toggleBtn.textContent = "🔆";
-    }
-
-    toggleBtn.addEventListener("click", () => {
-      if (htmlEl.classList.contains("dark")) {
-        htmlEl.classList.remove("dark");
-        localStorage.setItem("theme", "light");
-        toggleBtn.textContent = "🌙";
-      } else {
-        htmlEl.classList.add("dark");
-        localStorage.setItem("theme", "dark");
-        toggleBtn.textContent = "🔆";
-      }
-    });
-  </script>
-</body>
-</html>
-
-
-
-
-
