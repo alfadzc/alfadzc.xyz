@@ -232,17 +232,21 @@
   </footer>
 
   <!-- Particles Config -->
+  <script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script>
-  document.body.addEventListener("click", function(e) {
-    const ripple = document.createElement("span");
-    ripple.classList.add("ripple");
-    ripple.style.left = `${e.clientX}px`;
-    ripple.style.top = `${e.clientY}px`;
-    ripple.style.width = ripple.style.height = "100px";
-    document.body.appendChild(ripple);
-
-    setTimeout(() => {
-      ripple.remove();
-    }, 800);
+  particlesJS("particles-js", {
+    "particles": {
+      "number": { "value": 80 },
+      "size": { "value": 3 },
+      "move": { "speed": 2 },
+      "line_linked": { "enable": true, "color": "#60a5fa" }, // biru muda
+      "color": { "value": "#3b82f6" } // biru
+    },
+    "interactivity": {
+      "events": {
+        "onhover": { "enable": true, "mode": "repulse" }
+      }
+    }
   });
 </script>
