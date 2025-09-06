@@ -13,7 +13,7 @@
 <body class="bg-blue-100 text-black dark:bg-gray-900 dark:text-white relative min-h-screen">
 
   <!-- Background Particles -->
-  <div id="particles-js" class="fixed inset-0 -z-10"></div>
+<div id="particles-js" class="fixed inset-0 -z-10"></div>
 
 <!-- Navbar -->
 <nav class="flex justify-between items-center px-6 md:px-12 py-4 bg-white/80 dark:bg-black/60 backdrop-blur border-b border-gray-200 dark:border-gray-800">
@@ -217,25 +217,21 @@
 
   <!-- Particles Config -->
   <script>
-    particlesJS('particles-js', {
-      "particles": {
-        "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
-        "color": { "value": "#93c5fd" },
-        "shape": { "type": "circle" },
-        "opacity": { "value": 0.6 },
-        "size": { "value": 3, "random": true },
-        "line_linked": { "enable": true, "distance": 150, "color": "#60a5fa", "opacity": 0.4, "width": 1 },
-        "move": { "enable": true, "speed": 3 }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": { "onhover": { "enable": true, "mode": "grab" } },
-        "modes": { "grab": { "distance": 200, "line_linked": { "opacity": 0.7 } } }
-      },
-      "retina_detect": true
-    });
-  </script>
-
-</body>
-</html>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": { "value": 80 },
+      "size": { "value": 3 },
+      "move": { "speed": 2 },
+      "line_linked": { "enable": true, "color": "#60a5fa" }, // biru muda
+      "color": { "value": "#3b82f6" } // biru
+    },
+    "interactivity": {
+      "events": {
+        "onhover": { "enable": true, "mode": "repulse" }
+      }
+    }
+  });
+</script>
 
