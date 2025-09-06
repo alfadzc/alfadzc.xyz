@@ -32,7 +32,7 @@
         <div class="w-14 h-7 bg-gray-300 rounded-full dark:bg-gray-700 transition-colors duration-300 relative">
           <!-- Thumb -->
           <div id="theme-thumb" class="absolute left-1 top-1 w-5 h-5 bg-white rounded-full flex items-center justify-center text-xs transition-transform duration-300">
-            🔅
+            🔆
           </div>
         </div>
       </label>
@@ -62,7 +62,7 @@
     themeToggle.checked = false;
     tooltip.textContent = "Switch to dark theme";
     themeThumb.style.transform = "translateX(0)";
-    themeThumb.textContent = "🔅";
+    themeThumb.textContent = "🔆";
   }
 
   // Event listener untuk toggle
@@ -78,7 +78,7 @@
       localStorage.setItem("theme", "light");
       tooltip.textContent = "Switch to dark theme";
       themeThumb.style.transform = "translateX(0)";
-      themeThumb.textContent = "🔅";
+      themeThumb.textContent = "🔆";
     }
   });
 </script>
@@ -155,7 +155,7 @@
 
   <!-- Footer -->
   <footer class="bg-white/80 dark:bg-black/80 text-center p-6 border-t border-gray-200 dark:border-gray-800">
-    <p class="text-gray-700 dark:text-gray-500 text-sm">Copyright © 2025 All Rights Reserved by alfadzc.xyz.</p>
+    <p class="text-gray-700 dark:text-gray-500 text-sm">Copyright © 2025 alfadzc All Rights Reserved.</p>
   </footer>
 
   <!-- Particles Config -->
@@ -179,7 +179,7 @@
       toggleBtn.textContent = "🌙";
     } else {
       htmlEl.classList.add("dark");
-      toggleBtn.textContent = "☀️";
+      toggleBtn.textContent = "🔆";
     }
 
     toggleBtn.addEventListener("click", () => {
@@ -190,7 +190,7 @@
       } else {
         htmlEl.classList.add("dark");
         localStorage.setItem("theme", "dark");
-        toggleBtn.textContent = "☀️";
+        toggleBtn.textContent = "🔆";
       }
     });
   </script>
