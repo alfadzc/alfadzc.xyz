@@ -15,28 +15,37 @@
   <!-- Background Particles -->
   <div id="particles-js" class="absolute inset-0 -z-10"></div>
 
-  <!-- Navbar -->
+<!-- Navbar -->
 <nav class="flex justify-between items-center px-6 md:px-12 py-4 bg-white/80 dark:bg-black/60 backdrop-blur border-b border-gray-200 dark:border-gray-800">
-  <a href="#home" class="text-xl font-bold text-yellow-400">
-    alfadzc.xyz
-  </a>
-    <div class="space-x-6 flex items-center">
-      <a href="#home" class="hover:text-yellow-400">Home</a>
-      <a href="#services" class="hover:text-yellow-400">Services</a>
-      <a href="#docs" class="hover:text-yellow-400">Docs</a>
-      <a href="#tools" class="hover:text-yellow-400">Tools</a>
-      <a href="#contact" class="hover:text-yellow-400">Contact</a>
-      <!-- 🔹 Toggle Button -->
-    <label class="relative inline-flex items-center cursor-pointer ml-4">
-      <input type="checkbox" id="theme-toggle" class="sr-only peer">
-      <div class="w-14 h-7 bg-gray-300 dark:bg-gray-700 rounded-full peer-checked:bg-yellow-500 transition"></div>
-      <div class="absolute left-1 top-1 w-5 h-5 bg-white rounded-full transition peer-checked:translate-x-7 flex items-center justify-center text-xs">
-        <span class="peer-checked:hidden">☀️</span>
-        <span class="hidden peer-checked:block">🌙</span>
-      </div>
+  <a href="#home" class="text-xl font-bold text-yellow-400">alfadzc.xyz</a>
+  <div class="space-x-6 flex items-center">
+    <a href="#home" class="hover:text-yellow-400">Home</a>
+    <a href="#services" class="hover:text-yellow-400">Services</a>
+    <a href="#docs" class="hover:text-yellow-400">Docs</a>
+    <a href="#tools" class="hover:text-yellow-400">Tools</a>
+    <a href="#contact" class="hover:text-yellow-400">Contact</a>
+
+    <!-- Toggle Dark/Light -->
+    <label class="ml-4 relative inline-flex cursor-pointer items-center">
+      <input type="checkbox" id="theme-toggle" class="sr-only">
+      <span class="w-12 h-6 flex items-center rounded-full bg-gray-300 dark:bg-gray-700 p-1 transition">
+        <span class="w-5 h-5 bg-white rounded-full flex items-center justify-center transform transition peer-checked:translate-x-6">
+          <span id="icon" class="text-xs">☀️</span>
+        </span>
+      </span>
     </label>
   </div>
 </nav>
+
+<script>
+  const t = document.getElementById("theme-toggle"),
+        i = document.getElementById("icon"),
+        d = document.documentElement;
+  if(localStorage.theme==="dark"){d.classList.add("dark");t.checked=true;i.textContent="🌙";}
+  t.onchange=()=>{d.classList.toggle("dark",t.checked);
+    i.textContent=t.checked?"🌙":"☀️";
+    localStorage.theme=t.checked?"dark":"light";}
+</script>
 
   <!-- Hero Section -->
   <section id="home" class="flex flex-col justify-center items-center text-center py-24 px-6">
