@@ -28,13 +28,11 @@
     <!-- 🔹 Toggle Dark/Light -->
     <label class="ml-4 relative inline-flex items-center cursor-pointer">
       <input type="checkbox" id="theme-toggle" class="sr-only peer">
-      <div class="w-14 h-7 bg-gray-300 peer-focus:outline-none rounded-full peer dark:bg-gray-700 
-                  peer-checked:bg-yellow-500 transition">
-        <div class="absolute left-1 top-1 w-5 h-5 bg-white rounded-full transition 
-                    peer-checked:translate-x-7 flex items-center justify-center text-xs">
-          <!-- ☀️ muncul kalau light mode -->
+      <div class="relative w-14 h-7 bg-gray-300 rounded-full dark:bg-gray-700 peer-checked:bg-yellow-500 transition">
+        <div class="absolute left-1 top-1 w-5 h-5 bg-white rounded-full flex items-center justify-center text-xs transition-transform duration-300 peer-checked:translate-x-7">
+          <!-- ☀️ untuk light mode -->
           <span class="peer-checked:hidden">☀️</span>
-          <!-- 🌙 muncul kalau dark mode -->
+          <!-- 🌙 untuk dark mode -->
           <span class="hidden peer-checked:block">🌙</span>
         </div>
       </div>
@@ -46,7 +44,7 @@
 <script>
   const themeToggle = document.getElementById("theme-toggle");
 
-  // Load preferensi tema dari localStorage
+  // Load preferensi tema
   if (localStorage.getItem("theme") === "dark") {
     document.documentElement.classList.add("dark");
     themeToggle.checked = true;
