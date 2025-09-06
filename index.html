@@ -27,9 +27,16 @@
       <a href="#tools" class="hover:text-yellow-400">Tools</a>
       <a href="#contact" class="hover:text-yellow-400">Contact</a>
       <!-- 🔹 Toggle Button -->
-      <button id="theme-toggle" class="ml-4 text-yellow-400">☀️</button>
-    </div>
-  </nav>
+    <label class="relative inline-flex items-center cursor-pointer ml-4">
+      <input type="checkbox" id="theme-toggle" class="sr-only peer">
+      <div class="w-14 h-7 bg-gray-300 dark:bg-gray-700 rounded-full peer-checked:bg-yellow-500 transition"></div>
+      <div class="absolute left-1 top-1 w-5 h-5 bg-white rounded-full transition peer-checked:translate-x-7 flex items-center justify-center text-xs">
+        <span class="peer-checked:hidden">☀️</span>
+        <span class="hidden peer-checked:block">🌙</span>
+      </div>
+    </label>
+  </div>
+</nav>
 
   <!-- Hero Section -->
   <section id="home" class="flex flex-col justify-center items-center text-center py-24 px-6">
