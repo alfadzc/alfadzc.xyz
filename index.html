@@ -114,22 +114,37 @@
       A comprehensive list of our validation services and community contributions across all networks.
     </p>
 
-  <!-- Category Tabs -->
-   <p class="mt-6 max-w-2xl text-gray-600 dark:text-gray-400"></p>        
-   <div class="flex justify-center space-x-4 p-3 rounded-2xl mb-8">
-    <button class="px-6 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 font-semibold transition">
-      Validator Nodes 
-      <span class="ml-1 bg-blue-800 px-2 py-0.5 rounded-lg text-sm">10</span>
-   </button>
-   <button class="px-6 py-2 rounded-xl bg-yellow-600 hover:bg-geen-700 font-semibold transition">
-      Ecosystem Participation 
-      <span class="ml-1 bg-gray-700 px-2 py-0.5 rounded-lg text-sm">9</span>
-   </button>
-   <button class="px-6 py-2 rounded-xl bg-gray-600 hover:bg-gray-700 font-semibold transition">
-      Community Contributions 
-      <span class="ml-1 bg-gray-700 px-2 py-0.5 rounded-lg text-sm">2</span>
-    </button> 
-  </div>
+<!-- Category Tabs -->
+<div class="flex justify-center space-x-4 p-3 rounded-2xl mb-8">
+  <button onclick="setActive(this)" 
+    class="tab-btn px-6 py-2 rounded-xl bg-gray-600 hover:bg-gray-700 font-semibold transition text-white">
+    Validator Nodes
+    <span class="ml-1 bg-gray-800 px-2 py-0.5 rounded-lg text-sm">10</span>
+  </button>
+  <button onclick="setActive(this)" 
+    class="tab-btn px-6 py-2 rounded-xl bg-gray-600 hover:bg-gray-700 font-semibold transition text-white">
+    Ecosystem Participation
+    <span class="ml-1 bg-gray-800 px-2 py-0.5 rounded-lg text-sm">9</span>
+  </button>
+  <button onclick="setActive(this)" 
+    class="tab-btn px-6 py-2 rounded-xl bg-gray-600 hover:bg-gray-700 font-semibold transition text-white">
+    Community Contributions
+    <span class="ml-1 bg-gray-800 px-2 py-0.5 rounded-lg text-sm">2</span>
+  </button>
+</div>
+
+<script>
+  function setActive(el) {
+    // reset semua tombol ke abu-abu
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+      btn.classList.remove("bg-blue-600", "hover:bg-blue-700");
+      btn.classList.add("bg-gray-600", "hover:bg-gray-700");
+    });
+    // aktifkan tombol yang di klik
+    el.classList.remove("bg-gray-600", "hover:bg-gray-700");
+    el.classList.add("bg-blue-600", "hover:bg-blue-700");
+  }
+</script>
 
     <!-- Description -->
   <p class="mt-6 max-w-2xl mx-auto text-gray-600 dark:text-gray-300 text-center">
