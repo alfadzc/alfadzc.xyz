@@ -126,14 +126,17 @@
 <!-- Category Tabs -->
  <div class="flex justify-center space-x-4 p-3 rounded-2xl mb-8 mt-10">
    
-  <!-- Validator Nodes -->
-  <button id="tab-validator" 
-    class="px-6 py-2 rounded-xl bg-gray-500 text-white font-semibold cursor-pointer 
-           transition transform duration-200 border-2 border-transparent
-           hover:bg-purple-500 hover:scale-110">
+<!-- Validator Nodes -->
+ <label>
+  <input type="radio" name="tabs" class="hidden peer" checked>
+  <div class="px-6 py-2 rounded-xl bg-gray-500 text-gray font-semibold cursor-pointer 
+              transition transform duration-200 border-2 border-transparent
+              peer-checked:bg-purple-500 peer-checked:hover:bg-purple-700
+              peer-checked:scale-110 peer-checked:border-purple-600 peer-checked:shadow-lg peer-checked:shadow-purple-700/50">
     Validator Nodes
     <span class="ml-1 bg-gray-800 px-2 py-0.5 rounded-lg text-sm">10</span>
-  </button>
+  </div>
+ </label>
 
 <!-- Ecosystem Participation -->
  <label>
@@ -289,4 +292,3 @@
     }
   });
 </script>
-
