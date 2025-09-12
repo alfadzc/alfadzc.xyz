@@ -123,8 +123,9 @@
     </p>
    </div>
 
-<!-- Category Tabs --> 
-<div class="flex gap-4 justify-center mt-6">
+<!-- Category Tabs -->
+ <div class="flex justify-center space-x-4 p-3 rounded-2xl mb-8 mt-10">
+   
   <!-- Validator Nodes -->
   <button id="tab-validator" 
     class="px-6 py-2 rounded-xl bg-gray-500 text-white font-semibold cursor-pointer 
@@ -133,48 +134,6 @@
     Validator Nodes
     <span class="ml-1 bg-gray-800 px-2 py-0.5 rounded-lg text-sm">10</span>
   </button>
-
-  <!-- Ecosystem Participation -->
-  <button id="tab-ecosystem" 
-    class="px-6 py-2 rounded-xl bg-gray-500 text-white font-semibold cursor-pointer 
-           transition transform duration-200 border-2 border-transparent
-           hover:bg-purple-500 hover:scale-110">
-    Ecosystem Participation
-    <span class="ml-1 bg-gray-800 px-2 py-0.5 rounded-lg text-sm">9</span>
-  </button>
-</div>
-
-<script>
-  const tabValidator = document.getElementById("tab-validator");
-  const tabEcosystem = document.getElementById("tab-ecosystem");
-
-  function activateTab(tab) {
-    // Reset semua
-    [tabValidator, tabEcosystem].forEach(el => {
-      el.classList.remove("bg-purple-500", "border-purple-600", "shadow-lg", "shadow-purple-700/50");
-      el.classList.add("bg-gray-500");
-    });
-
-    // Aktifkan tab yang dipilih
-    tab.classList.remove("bg-gray-500");
-    tab.classList.add("bg-purple-500", "border-purple-600", "shadow-lg", "shadow-purple-700/50");
-  }
-
-  // Default aktif Validator
-  activateTab(tabValidator);
-
-  tabValidator.addEventListener("click", () => activateTab(tabValidator));
-  tabEcosystem.addEventListener("click", () => activateTab(tabEcosystem));
-</script>
-
-<!-- Ecosystem Participation -->
-<a href="#ecosystem" 
-   class="px-6 py-2 rounded-xl bg-gray-500 text-white font-semibold cursor-pointer 
-          transition transform duration-200 border-2 border-transparent
-          hover:bg-purple-500 hover:scale-110 hover:border-purple-600 hover:shadow-lg hover:shadow-purple-700/50">
-  Ecosystem Participation
-  <span class="ml-1 bg-gray-800 px-2 py-0.5 rounded-lg text-sm">9</span>
-</a>
 
 <!-- Ecosystem Participation -->
  <label>
@@ -330,3 +289,4 @@
     }
   });
 </script>
+
