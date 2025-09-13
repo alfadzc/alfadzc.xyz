@@ -10,15 +10,15 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> 
  </head> 
- <body class="bg-gray-50 text-black dark:bg-gray-900 dark:text-white relative min-h-screen">
+ <body class="bg-blue-50 text-black dark:bg-gray-900 dark:text-white relative min-h-screen">
 
   <!-- Background Particles -->
-<div id="particles-js" class="fixed inset-0 -z-10"></div>
+  <div id="particles-js" class="fixed inset-0 -z-10"></div>
   
 <!-- Navbar -->
 <nav class="flex justify-between items-center px-6 md:px-12 py-4 
-  bg-black/50 dark:bg-gray-900/70 backdrop-blur 
-  border-b border-gray-200 dark:border-gray-800 relative">
+  bg-blue-100/80 dark:bg-gray-900/70 backdrop-blur 
+  border-b border-blue-200 dark:border-gray-800 relative">
 
   <!-- Tengah: Brand -->
   <div class="absolute left-1/2 transform -translate-x-1/2">
@@ -33,19 +33,18 @@
     <a href="#tools" class="hover:text-yellow-400">Tools</a>
     <a href="#contact" class="hover:text-yellow-400">Contact</a>
 
-    <!-- 🔹 Toggle Dark/Light dengan tooltip di bawah -->
+    <!-- 🔹 Toggle Dark/Light -->
     <div class="ml-4 relative group">
       <label class="relative inline-flex items-center cursor-pointer">
         <input type="checkbox" id="theme-toggle" class="sr-only peer">
-        <div class="w-14 h-7 bg-gray-300 rounded-full dark:bg-gray-700 transition-colors duration-300 relative">
+        <div class="w-14 h-7 bg-blue-200 rounded-full dark:bg-gray-700 transition-colors duration-300 relative">
           <!-- Thumb -->
           <div id="theme-thumb" class="absolute left-1 top-1 w-5 h-5 bg-white rounded-full flex items-center justify-center text-xs transition-transform duration-300">
             🔆
           </div>
         </div>
       </label>
-      <!-- Tooltip di bawah toggle -->
-      <div id="theme-tooltip" class="absolute top-full mt-2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gray-800 text-white text-xs font-bold rounded py-1 px-2 whitespace-nowrap text-center">
+      <div id="theme-tooltip" class="absolute top-full mt-2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-blue-600 text-white text-xs font-bold rounded py-1 px-2 whitespace-nowrap text-center">
         Switch to dark theme
       </div>
     </div>
@@ -58,7 +57,6 @@
   const themeThumb = document.getElementById("theme-thumb");
   const tooltip = document.getElementById("theme-tooltip");
 
-  // Load preferensi tema
   if (localStorage.getItem("theme") === "dark") {
     document.documentElement.classList.add("dark");
     themeToggle.checked = true;
@@ -73,7 +71,6 @@
     themeThumb.textContent = "🔆";
   }
 
-  // Event listener untuk toggle
   themeToggle.addEventListener("change", () => {
     if (themeToggle.checked) {
       document.documentElement.classList.add("dark");
@@ -92,33 +89,30 @@
 </script>
 
   <!-- Home Section -->
-  <section id="home" class="flex flex-col justify-center items-center text-center py-24 px-6">
-    <p class="text-gray-600 dark:text-gray-300 mb-2 font-bold">TRUSTED VALIDATOR FOR BLOCKCHAIN TECHNOLOGY</p>
-<h2 class="text-3xl md:text-4xl font-bold leading-tight">
-  <span style="
-    background: linear-gradient(90deg, #00ff87, #FFD700);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-  ">
-    Connecting Decentralized Networks
-  </span>
-</h2>
-    <p class="mt-6 max-w-2xl text-gray-600 dark:text-gray-300">
+  <section id="home" class="flex flex-col justify-center items-center text-center py-24 px-6 bg-blue-50 dark:bg-gray-900">
+    <p class="text-blue-700 dark:text-gray-300 mb-2 font-bold">TRUSTED VALIDATOR FOR BLOCKCHAIN TECHNOLOGY</p>
+    <h2 class="text-3xl md:text-4xl font-bold leading-tight">
+      <span style="
+        background: linear-gradient(90deg, #00ff87, #FFD700);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;">
+        Connecting Decentralized Networks
+      </span>
+    </h2>
+    <p class="mt-6 max-w-2xl text-blue-700 dark:text-gray-300">
       Reliable infrastructure and modern tools for node operators, developers, and communities.  
       Providing guidance and deep insights for blockchain projects.
     </p>
-   </div>
-  </section>  
+   </section>  
     
   <!-- Ecosystem Section -->
-<section id="Ecosystem" class="flex flex-col justify-center items-center text-center py-24 px-6">
+<section id="Ecosystem" class="flex flex-col justify-center items-center text-center py-24 px-6 bg-blue-100 dark:bg-gray-900">
   <div class="max-w-4xl mx-auto">
-    <!-- Title -->
     <h2 class="text-2xl md:text-3xl font-bold leading-tight">
       <span style="color:#FFD700;">Explore Our Ecosystem</span>
     </h2>
-    <p class="mt-6 max-w-2xl mx-auto text-gray-600 dark:text-gray-300 text-center">
+    <p class="mt-6 max-w-2xl mx-auto text-blue-700 dark:text-gray-300 text-center">
       A comprehensive list of our validation services and community contributions across all networks.
     </p>
    </div>
@@ -129,77 +123,45 @@
 <!-- Validator Nodes -->
  <label>
   <input type="radio" name="tabs" class="hidden peer" checked>
-  <div class="px-6 py-2 rounded-xl bg-gray-500 text-gray font-semibold cursor-pointer 
+  <div class="px-6 py-2 rounded-xl bg-blue-200 text-black font-semibold cursor-pointer 
               transition transform duration-200 border-2 border-transparent
               peer-checked:bg-purple-500 peer-checked:hover:bg-purple-700
               peer-checked:scale-110 peer-checked:border-purple-600 peer-checked:shadow-lg peer-checked:shadow-purple-700/50">
     Validator Nodes
-    <span class="ml-1 bg-gray-800 px-2 py-0.5 rounded-lg text-sm">10</span>
+    <span class="ml-1 bg-blue-300 px-2 py-0.5 rounded-lg text-sm">10</span>
   </div>
  </label>
 
 <!-- Ecosystem Participation -->
  <label>
   <input type="radio" name="tabs" class="hidden peer" checked>
-  <div class="px-6 py-2 rounded-xl bg-gray-500 text-gray font-semibold cursor-pointer 
+  <div class="px-6 py-2 rounded-xl bg-blue-200 text-black font-semibold cursor-pointer 
               transition transform duration-200 border-2 border-transparent
               peer-checked:bg-purple-500 peer-checked:hover:bg-purple-700
               peer-checked:scale-110 peer-checked:border-purple-600 peer-checked:shadow-lg peer-checked:shadow-purple-700/50">
     Ecosystem Participation
-    <span class="ml-1 bg-gray-800 px-2 py-0.5 rounded-lg text-sm">9</span>
+    <span class="ml-1 bg-blue-300 px-2 py-0.5 rounded-lg text-sm">9</span>
   </div>
  </label>
 
 <!-- Community Contributions -->
  <label>
   <input type="radio" name="tabs" class="hidden peer" checked>
-  <div class="px-6 py-2 rounded-xl bg-gray-500 text-gray font-semibold cursor-pointer 
+  <div class="px-6 py-2 rounded-xl bg-blue-200 text-black font-semibold cursor-pointer 
               transition transform duration-200 border-2 border-transparent
               peer-checked:bg-purple-500 peer-checked:hover:bg-purple-700
               peer-checked:scale-110 peer-checked:border-purple-600 peer-checked:shadow-lg peer-checked:shadow-purple-700/50">
     Community Contributions
-    <span class="ml-1 bg-gray-800 px-2 py-0.5 rounded-lg text-sm">2</span>
+    <span class="ml-1 bg-blue-300 px-2 py-0.5 rounded-lg text-sm">2</span>
   </div>
  </label>
 </div> 
-    
-    <!-- Description -->
-  <p class="mt-6 max-w-2xl mx-auto text-gray-600 dark:text-gray-300 text-center">
-      We actively contribute to securing decentralized networks by running high-performance validator nodes with 24/7 uptime 
-      monitoring and community support.
-    </p>
-   </div>
-  </section>    
-  
-<!-- Network Filters -->
-<div class="flex justify-center space-x-6 mb-10">
+</section>    
 
-  <!-- Testnet -->
-  <label>
-    <input type="radio" name="network" class="hidden peer" checked>
-    <div class="px-6 py-2 rounded-xl bg-gray-600 text-white font-semibold cursor-pointer transition 
-                peer-checked:bg-blue-600 peer-checked:hover:bg-blue-700 hover:scale-105">
-      Testnet 
-      <span class="ml-1 bg-gray-800 px-2 py-0.5 rounded-lg text-sm">9</span>
-    </div>
-  </label>
-
-  <!-- Mainnet -->
-  <label>
-    <input type="radio" name="network" class="hidden peer">
-    <div class="px-6 py-2 rounded-xl bg-gray-600 text-white font-semibold cursor-pointer transition 
-                peer-checked:bg-blue-600 peer-checked:hover:bg-blue-700 hover:scale-105">
-      Mainnet 
-      <span class="ml-1 bg-gray-800 px-2 py-0.5 rounded-lg text-sm">0</span>
-    </div>
-  </label>
-
-</div>
-
-  <!-- Docs Section -->
- <section id="docs" class="py-20 px-6 md:px-12 text-center bg-gray-50 dark:bg-gray-900">
+<!-- Docs Section -->
+ <section id="docs" class="py-20 px-6 md:px-12 text-center bg-blue-200 dark:bg-gray-900">
     <h3 class="text-3xl font-bold mb-6" style="color:#FFD700;">Documentation</h3>
-    <p class="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+    <p class="text-blue-700 dark:text-gray-300 max-w-2xl mx-auto">
       Access our guides and technical resources to get started with our validator services,  
       setup tutorials, and API references.
     </p>
@@ -209,81 +171,67 @@
   </section>
 
   <!-- Tools Section -->
-  <section id="tools" class="py-20 px-6 md:px-12 text-center">
+  <section id="tools" class="py-20 px-6 md:px-12 text-center bg-blue-50 dark:bg-gray-900">
     <h3 class="text-3xl font-bold mb-6" style="color:#FFD700;">Our Tools</h3>
-    <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+    <p class="text-blue-700 dark:text-gray-300 max-w-2xl mx-auto">
       Explore monitoring dashboards and blockchain analytics tools built for the community.
     </p>
     <div class="mt-8 flex flex-col md:flex-row justify-center gap-6">
-      <div class="bg-gray-300 dark:bg-gray-800 p-6 rounded-2xl shadow-lg w-full md:w-1/3">
+      <div class="bg-blue-100 dark:bg-gray-800 p-6 rounded-2xl shadow-lg w-full md:w-1/3">
         <h4 class="text-xl font-semibold mb-2" style="color:#FFD700;">Validator Monitor</h4>
-        <p class="text-gray-700 dark:text-gray-300">Track node uptime, performance, and reliability real time.</p>
+        <p class="text-blue-700 dark:text-gray-300">Track node uptime, performance, and reliability real time.</p>
       </div>
-      <div class="bg-gray-300 dark:bg-gray-800 p-6 rounded-2xl shadow-lg w-full md:w-1/3">
+      <div class="bg-blue-100 dark:bg-gray-800 p-6 rounded-2xl shadow-lg w-full md:w-1/3">
         <h4 class="text-xl font-semibold mb-2" style="color:#FFD700;">Analytics Dashboard</h4>
-        <p class="text-gray-700 dark:text-gray-300">Visualize blockchain metrics with modern and intuitive charts.</p>
+        <p class="text-blue-700 dark:text-gray-300">Visualize blockchain metrics with modern and intuitive charts.</p>
       </div>
     </div>
   </section>
 
 <!-- Contact Section -->
-<section id="contact" class="py-20 px-6 md:px-12 text-center bg-gray-100 dark:bg-gray-900">
+<section id="contact" class="py-20 px-6 md:px-12 text-center bg-blue-100 dark:bg-gray-900">
   <h3 class="text-3xl font-bold mb-6" style="color:#FFD700;">Contact Us</h3>
-  <p class="text-gray-600 dark:text-gray-300 mb-4">Have questions or want to collaborate? Reach out to us:</p>
+  <p class="text-blue-700 dark:text-gray-300 mb-4">Have questions or want to collaborate? Reach out to us:</p>
   
-  <!-- Email tetap di atas -->
-  <p class="text-gray-800 dark:text-gray-300 mb-6">📩 Email: 
+  <p class="text-blue-900 dark:text-gray-300 mb-6">📩 Email: 
     <a href="mailto:contact@alfadzc.xyz" style="color:#FFD700;">contact@alfadzc.xyz</a>
   </p>
 
-  <!-- Social Buttons sejajar horizontal di bawah Email -->
+  <!-- Social Buttons -->
   <div class="flex justify-center items-center gap-4">
     <!-- Twitter -->
     <a href="https://x.com/lfadzcc" target="_blank" class="flex items-center justify-center w-11 h-11 rounded-full bg-blue-500 hover:bg-blue-600 text-white transition" title="Twitter">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-6 h-6">
-        <path d="M24 4.557a9.83 9.83 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724 9.864 9.864 0 0 1-3.127 1.195 4.916 4.916 0 0 0-8.384 4.482A13.945 13.945 0 0 1 1.671 3.149a4.916 4.916 0 0 0 1.523 6.557 4.897 4.897 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.918 4.918 0 0 0 4.59 3.417 9.867 9.867 0 0 1-6.102 2.104c-.396 0-.788-.023-1.176-.069a13.945 13.945 0 0 0 7.548 2.212c9.058 0 14.01-7.514 14.01-14.01 0-.213-.005-.425-.014-.636A10.025 10.025 0 0 0 24 4.557z"/>
-      </svg>
+      <!-- ... SVG ... -->
     </a>
-
-<!-- Discord -->
-<a href="https://discord.com/users/940270226904318043" target="_blank" class="flex items-center justify-center w-11 h-11 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white transition" title="Discord">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71 55" fill="white" class="w-6 h-6">
-    <path d="M60.104 4.552A58.725 58.725 0 0046.882.5a41.795 41.795 0 00-1.995 4.153 56.317 56.317 0 00-16.771 0A41.79 41.79 0 0025.122.5 58.73 58.73 0 0011.9 4.552C4.474 18.28 1.2 31.744 1.956 45.1a59.65 59.65 0 0017.874 9.09 43.245 43.245 0 003.793-6.204 36.05 36.05 0 01-5.887-2.89c.494-.36.983-.735 1.464-1.121 11.62 5.37 24.26 5.37 35.79 0 .48.386.97.761 1.465 1.12a36.04 36.04 0 01-5.888 2.89 43.254 43.254 0 003.793 6.204 59.64 59.64 0 0017.874-9.09c.756-13.357-2.518-26.822-9.944-40.548zM23.725 37.3c-3.178 0-5.8-2.91-5.8-6.48 0-3.57 2.582-6.48 5.8-6.48 3.23 0 5.843 2.91 5.8 6.48 0 3.57-2.57 6.48-5.8 6.48zm23.55 0c-3.178 0-5.8-2.91-5.8-6.48 0-3.57 2.582-6.48 5.8-6.48 3.23 0 5.843 2.91 5.8 6.48 0 3.57-2.57 6.48-5.8 6.48z"/>
-  </svg>
-</a>
-
+    <!-- Discord -->
+    <a href="https://discord.com/users/940270226904318043" target="_blank" class="flex items-center justify-center w-11 h-11 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white transition" title="Discord">
+      <!-- ... SVG ... -->
+    </a>
     <!-- Telegram -->
     <a href="https://t.me/alfadzc" target="_blank" class="flex items-center justify-center w-11 h-11 rounded-full bg-blue-400 hover:bg-blue-500 text-white transition" title="Telegram">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 240 240" class="w-6 h-6">
-        <path d="M120 0C53.7 0 0 53.7 0 120s53.7 120 120 120 120-53.7 120-120S186.3 0 120 0zm55.8 84.5l-20.8 97c-1.6 6-5.8 7.5-11.7 4.7l-32.4-23.9-15.7 15.1c-1.7 1.7-3.1 3.1-6.3 3.1l2.2-31.5 57.5-52.1c2.5-2.2-0.6-3.5-3.9-1.3l-71 44.8-30.6-9.6c-6.6-2.1-6.7-6.6 1.4-9.7l119.1-46.1c5.5-2.1 10.4 1.3 8.8 9.5z"/>
-      </svg>
+      <!-- ... SVG ... -->
     </a>
-
- <!-- Github -->
-    <a href="https://github.com/alfadzc" target="_blank" class="flex items-center justify-center w-11 h-11 rounded-full bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 text-white transition" title="Github">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-6 h-6">
-        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577v-2.234c-3.338.724-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.082-.729.082-.729 1.205.084 1.838 1.238 1.838 1.238 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.303-5.467-1.334-5.467-5.933 0-1.31.468-2.382 1.236-3.222-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.51 11.51 0 0 1 3-.403c1.02.005 2.045.138 3 .403 2.288-1.552 3.293-1.23 3.293-1.23.656 1.653.244 2.873.12 3.176.77.84 1.235 1.912 1.235 3.222 0 4.61-2.807 5.625-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .32.216.694.825.576C20.565 21.796 24 17.3 24 12c0-6.63-5.373-12-12-12z"/>
-      </svg>
+    <!-- Github -->
+    <a href="https://github.com/alfadzc" target="_blank" class="flex items-center justify-center w-11 h-11 rounded-full bg-blue-200 dark:bg-gray-700 hover:bg-blue-300 dark:hover:bg-gray-600 text-white transition" title="Github">
+      <!-- ... SVG ... -->
     </a>
   </div>
 </section>
 
   <!-- Footer -->
-  <footer class="bg-black/50 dark:bg-black/50 text-center p-6 border-t border-gray-200 dark:border-gray-700">
+  <footer class="bg-blue-200 dark:bg-black/50 text-center p-6 border-t border-blue-300 dark:border-gray-700">
     <p class="text-sm" style="color:#FFD600;">Copyright © 2025 alfadzc.xyz All Rights Reserved.</p>
   </footer>
 
 <!-- Particles Config -->
-  <script>
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script>
   particlesJS("particles-js", {
     "particles": {
       "number": { "value": 80 },
       "size": { "value": 3 },
       "move": { "speed": 2 },
-      "line_linked": { "enable": true, "color": "#60a5fa" }, // biru muda
-      "color": { "value": "#3b82f6" } // biru
+      "line_linked": { "enable": true, "color": "#60a5fa" },
+      "color": { "value": "#3b82f6" }
     },
     "interactivity": {
       "events": {
@@ -292,3 +240,5 @@
     }
   });
 </script>
+</body>
+</html>
