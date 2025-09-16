@@ -21,11 +21,28 @@
   border-b border-gray-200 dark:border-gray-800 relative">
 
   <!-- Brand agak ke tengah tapi di kiri -->
-  <div class="ml-8"> 
-    <a href="#home" class="text-xl font-bold text-gray-900 dark:text-gray-200 cursor-pointer">
-      alfadzc.xyz
-    </a>
-  </div>
+<div class="ml-8">
+  <a href="#home" class="text-xl font-bold text-gray-900 dark:text-gray-200 cursor-pointer glow-text">
+    alfadzc.xyz
+  </a>
+</div>
+
+<style>
+  /* Efek cahaya menyala */
+  .glow-text {
+    position: relative;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 5px #ff7b00, 0 0 10px #ff7b00, 0 0 20px #ff5500;
+    }
+    to {
+      text-shadow: 0 0 10px #ffa733, 0 0 20px #ff7b00, 0 0 40px #ff5500;
+    }
+  }
+</style>
 
   <!-- Kanan: Menu + Toggle -->
   <div class="flex items-center space-x-6 ml-auto mr-8">
