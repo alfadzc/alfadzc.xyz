@@ -22,24 +22,35 @@
 
   <!-- Brand agak ke tengah tapi di kiri -->
 <div class="ml-8">
-  <a href="#home" class="text-xl font-bold text-gray-900 dark:text-gray-200 cursor-pointer glow-text">
+  <a href="#home" class="text-xl font-bold cursor-pointer shine-text">
     alfadzc.xyz
   </a>
 </div>
 
 <style>
-  /* Efek cahaya menyala */
-  .glow-text {
+  .shine-text {
     position: relative;
-    animation: glow 2s ease-in-out infinite alternate;
+    display: inline-block;
+    color: #ddd; /* warna dasar teks */
+    font-weight: bold;
+    background: linear-gradient(
+      90deg,
+      #ddd 0%,
+      #ff7b00 50%,
+      #ddd 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
   }
 
-  @keyframes glow {
-    from {
-      text-shadow: 0 0 5px #ff7b00, 0 0 10px #ff7b00, 0 0 20px #ff5500;
+  @keyframes shine {
+    0% {
+      background-position: 200% center;
     }
-    to {
-      text-shadow: 0 0 10px #ffa733, 0 0 20px #ff7b00, 0 0 40px #ff5500;
+    100% {
+      background-position: -200% center;
     }
   }
 </style>
