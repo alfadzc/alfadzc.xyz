@@ -10,58 +10,37 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> 
  </head> 
- <body class="bg-gray-100 text-black dark:bg-gray-900 dark:text-white relative min-h-screen">
+<body class="bg-gray-100 text-black dark:text-white relative min-h-screen">
 
-  <!-- Background Particles -->
-  <div id="particles-js" class="fixed inset-0 -z-10"></div>
-  
-<!-- Navbar -->
-<nav class="flex justify-between items-center px-6 md:px-12 py-4 
-  bg-blue-500 dark:bg-gray-800/70 backdrop-blur 
-  border-b border-gray-200 dark:border-gray-800 relative">
+  <!-- Background untuk dark mode -->
+  <div class="fixed inset-0 -z-10 hidden dark:block">
+    <img src="Screenshot 2025-09-16 205303.png" 
+         alt="dark background" 
+         class="w-full h-full object-cover" />
+  </div>
 
-  <!-- Brand agak ke tengah tapi di kiri -->
-<div class="ml-8">
-  <a href="#home" class="text-xl font-bold cursor-pointer shine-text">
-    alfadzc.xyz
-  </a>
-</div>
+  <!-- Background untuk light mode -->
+  <div class="fixed inset-0 -z-10 block dark:hidden bg-gray-100"></div>
 
-<style>
-  .shine-text {
-    position: relative;
-    display: inline-block;
-    color: #ddd; /* warna dasar teks */
-    font-weight: bold;
-    background: linear-gradient(
-      90deg,
-      #ddd 0%,
-      #00d9ff 50%,
-      #ddd 100%
-    );
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shine 3s linear infinite;
-  }
-
-  @keyframes shine {
-    0% {
-      background-position: 200% center;
-    }
-    100% {
-      background-position: -200% center;
-    }
-  }
-</style>
-
-  <!-- Kanan: Menu + Toggle -->
-  <div class="flex items-center space-x-6 ml-auto mr-8">
-    <a href="#home" class="hover:text-gray-200 cursor-pointer">Home</a>
-    <a href="#ecosystem"class="hover:text-gray-200 cursor-pointer">Ecosystem</a>
-    <a href="#docs" class="hover:text-gray-200 cursor-pointer">Docs</a>
-    <a href="#tools" class="hover:text-gray-200 cursor-pointer">Tools</a>
-    <a href="#contact" class="hover:text-gray-200 cursor-pointer">Contact</a>
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-6 md:px-12 py-4 
+    bg-blue-500 dark:bg-gray-900/80 backdrop-blur 
+    border-b border-gray-200 dark:border-gray-800 relative">
+    <div class="ml-8">
+      <a href="#home" class="text-xl font-bold cursor-pointer shine-text">
+        alfadzc.xyz
+      </a>
+    </div>
+    <!-- Menu kanan -->
+    <div class="flex items-center space-x-6 mr-8">
+      <a href="#home" class="hover:text-gray-200 cursor-pointer">Home</a>
+      <a href="#ecosystem" class="hover:text-gray-200 cursor-pointer">Ecosystem</a>
+      <a href="#docs" class="hover:text-gray-200 cursor-pointer">Docs</a>
+      <a href="#tools" class="hover:text-gray-200 cursor-pointer">Tools</a>
+      <a href="#contact" class="hover:text-gray-200 cursor-pointer">Contact</a>
+    </div>
+  </nav>
+</body>
 
     <!-- 🔹 Toggle Dark/Light dengan tooltip di bawah -->
     <div class="ml-4 relative group">
