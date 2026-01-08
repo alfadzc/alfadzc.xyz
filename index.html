@@ -1,3 +1,4 @@
+
 <!DOCTYPE html> 
 <html lang="en" class="dark"> 
 <head> 
@@ -168,7 +169,7 @@
 
 <!-- Category Tabs -->
 <div class="flex justify-center space-x-4 p-3 rounded-2xl mb-8 mt-10">
-  
+
   <!-- Validator Nodes -->
   <label>
     <input type="radio" name="tabs" class="hidden peer" checked>
@@ -176,7 +177,7 @@
                 transition transform duration-200 border-2 border-transparent
                 peer-checked:bg-orange-200 peer-checked:hover:bg-orange-400
                 peer-checked:scale-110 peer-checked:border-purple-600 peer-checked:shadow-lg peer-checked:shadow-purple-700/50">
-      Mainnet
+      Validator Nodes
       <span class="ml-1 bg-blue-100 px-2 py-0.5 rounded-lg text-sm">10</span>
     </div>
   </label>
@@ -188,10 +189,23 @@
                 transition transform duration-200 border-2 border-transparent
                 peer-checked:bg-orange-200 peer-checked:hover:bg-orange-400
                 peer-checked:scale-110 peer-checked:border-purple-600 peer-checked:shadow-lg peer-checked:shadow-purple-700/50">
-      Tesnet
+      Ecosystem Participation
       <span class="ml-1 bg-blue-100 px-2 py-0.5 rounded-lg text-sm">9</span>
     </div>
   </label>
+
+  <!-- Community Contributions -->
+  <label>
+    <input type="radio" name="tabs" class="hidden peer">
+    <div class="px-8 py-2 min-w-[220px] text-center rounded-xl bg-blue-200 text-black font-semibold cursor-pointer 
+                transition transform duration-200 border-2 border-transparent
+                peer-checked:bg-orange-200 peer-checked:hover:bg-orange-400
+                peer-checked:scale-110 peer-checked:border-purple-600 peer-checked:shadow-lg peer-checked:shadow-purple-700/50">
+      Community Contributions
+      <span class="ml-1 bg-blue-100 px-2 py-0.5 rounded-lg text-sm">2</span>
+    </div>
+  </label>
+</div>
 
 <!-- Docs Section -->
   <section id="docs" class="flex flex-col justify-center items-center text-center py-24 px-6">
