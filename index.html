@@ -171,43 +171,37 @@
    </div>
 
 <!-- Category Tabs -->
-<div class="flex justify-center space-x-6 mb-10 mt-12">
+<div class="flex justify-center gap-6 mb-10 mt-12">
 
   <!-- Mainnet -->
-  <label>
-    <input type="radio" name="tabs" class="hidden peer" checked>
-    <div class="px-10 py-4 min-w-[260px] text-center rounded-2xl 
-                bg-yellow-300 text-black font-bold cursor-pointer
-                transition transform duration-300 border-2 border-transparent
-                hover:bg-yellow-400
-                peer-checked:bg-yellow-400
-                peer-checked:scale-110
-                peer-checked:border-yellow-600
-                peer-checked:shadow-xl peer-checked:shadow-yellow-500/40">
-      Mainnet
-      <span class="ml-2 bg-yellow-200 px-3 py-1 rounded-lg text-sm font-extrabold">
-        5
-      </span>
-    </div>
-  </label>
+  <button
+    id="btn-mainnet"
+    onclick="showMainnet()"
+    class="px-10 py-4 min-w-[260px] text-center rounded-2xl 
+           bg-yellow-400 text-black font-bold
+           transition transform duration-300
+           border-2 border-yellow-600
+           shadow-xl shadow-yellow-500/40 scale-110">
+    Mainnet
+    <span class="ml-2 bg-yellow-200 px-3 py-1 rounded-lg text-sm font-extrabold">
+      5
+    </span>
+  </button>
 
   <!-- Testnet -->
-  <label>
-    <input type="radio" name="tabs" class="hidden peer">
-    <div class="px-10 py-4 min-w-[260px] text-center rounded-2xl 
-                bg-yellow-300 text-black font-bold cursor-pointer
-                transition transform duration-300 border-2 border-transparent
-                hover:bg-yellow-400
-                peer-checked:bg-yellow-400
-                peer-checked:scale-110
-                peer-checked:border-yellow-600
-                peer-checked:shadow-xl peer-checked:shadow-yellow-500/40">
-      Testnet
-      <span class="ml-2 bg-yellow-200 px-3 py-1 rounded-lg text-sm font-extrabold">
-        3
-      </span>
-    </div>
-  </label>
+  <button
+    id="btn-testnet"
+    onclick="showTestnet()"
+    class="px-10 py-4 min-w-[260px] text-center rounded-2xl 
+           bg-yellow-300 text-black font-bold
+           transition transform duration-300
+           border-2 border-transparent
+           hover:bg-yellow-400">
+    Testnet
+    <span class="ml-2 bg-yellow-200 px-3 py-1 rounded-lg text-sm font-extrabold">
+      3
+    </span>
+  </button>
 
 </div>
 
