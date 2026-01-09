@@ -297,7 +297,7 @@
   </p>
 </footer>
 
-<!-- Particles Config -->
+  <!-- Particles Config -->
 <script>
   particlesJS("particles-js", {
     "particles": {
@@ -314,5 +314,54 @@
     }
   });
 </script>
+
+<!-- TAB SWITCH SCRIPT -->
+<script>
+  function showMainnet() {
+    document.getElementById("mainnet").classList.remove("hidden");
+    document.getElementById("testnet").classList.add("hidden");
+
+    document.getElementById("btn-mainnet").classList.add(
+      "bg-yellow-400",
+      "border-yellow-600",
+      "scale-110",
+      "shadow-xl",
+      "shadow-yellow-500/40"
+    );
+
+    document.getElementById("btn-testnet").classList.remove(
+      "bg-yellow-400",
+      "border-yellow-600",
+      "scale-110",
+      "shadow-xl",
+      "shadow-yellow-500/40"
+    );
+  }
+
+  function showTestnet() {
+    document.getElementById("testnet").classList.remove("hidden");
+    document.getElementById("mainnet").classList.add("hidden");
+
+    document.getElementById("btn-testnet").classList.add(
+      "bg-yellow-400",
+      "border-yellow-600",
+      "scale-110",
+      "shadow-xl",
+      "shadow-yellow-500/40"
+    );
+
+    document.getElementById("btn-mainnet").classList.remove(
+      "bg-yellow-400",
+      "border-yellow-600",
+      "scale-110",
+      "shadow-xl",
+      "shadow-yellow-500/40"
+    );
+  }
+
+  // Default aktif saat halaman dibuka
+  showMainnet();
+</script>
+
 </body>
 </html>
